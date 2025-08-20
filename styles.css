@@ -1,0 +1,242 @@
+.header {
+  background-color: #145C9E;
+  color: #99AAAF;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  font-size: 150%;
+  padding: 15px;
+  margin: 20px;
+  width: auto;
+  min-height: 130px;
+  position: relative;
+}
+.header-left {
+  margin-right: 120px;
+  padding-left: 15px;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.header-right {
+  width: 100px;
+  height: 100px;
+  margin-right: 15px;
+  padding: 5px;
+  right: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+body {
+  background-color: #201F1E;
+}
+h1 {
+  color: #D0D8DA;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  font-size: 200%;
+}
+h4 {
+  color: #99AAAF;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  font-size: 100%;
+}
+p  {
+  color: #FFFFFF;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  font-size: 100%;
+}
+object  {
+  color: #FFFFFF;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  font-size: 100%;
+}
+.pad {
+  padding: 0px 40px;
+}
+l:link, l:visited {
+  background-color: none;
+  color: none;
+  padding: 1px 1px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+l:hover, l:active {
+  padding: 1px 1px;
+  background-color: #201F1E;
+}
+.header a:link, a:visited {
+  color: #D0D8DA;
+}
+.header a:hover, a:active {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+.footer {
+  width: auto;
+  position: relative;
+}
+.footer-grid {
+  background-color: #201F1E;
+  color: #99AAAF;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  font-size: 80%;
+  padding: 15px;
+  margin: 20px;
+  width: auto;
+  position: relative;
+}
+
+p img {
+  float: right;
+  padding: 30px;
+  margin: 50px;
+}
+
+.logo {
+    position: relative;
+    display: inline-block;
+}
+.logo .img-top {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+.logo:hover .img-top {
+    display: inline;
+}
+
+/* The side navigation menu */
+.sidebar {
+  margin: 20px;
+  padding: 15px;
+  width: 200px;
+  background-color: #201F1E;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  position: absolute;
+  height: 310px;
+  overflow: auto;
+}
+
+/* Sidebar links */
+.sidebar a {
+  display: block;
+  color: #99AAAF;
+  padding: 16px;
+  text-decoration: none;
+}
+
+/* Active/current link */
+.sidebar a.active {
+  background-color: #145C9E;
+  color: #99AAAF;
+  font-weight: bold;
+}
+
+/* Links on mouse-over */
+.sidebar a:hover:not(.active) {
+  background-color: #197BBD;
+  color: white;
+  font-weight: bold;
+}
+
+/* The profilePic on right */
+.pic {
+  margin: 20px;
+  padding: 15px;
+  width: 280px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #201F1E;
+}
+
+/* Page content. The value of the margin-left property should match the value of the sidebar's width property */
+div.allcontent {
+  max-width: 1440px;
+  min-width: 320px;
+  margin: auto;
+  width: auto;
+  position: relative;
+}
+div.page {
+  margin: auto;
+  width: auto;
+  position: relative;
+}
+div.content {
+  margin-left: 240px;
+  margin-right: 280px;
+  padding: 20px 20px;
+  height: auto;
+  min-height: 300px;
+  width: auto;
+  font-family: 'Armata', 'Helvetica', Sans-serif;
+  color: #FFFFFF;
+  background-color: #201F1E;
+}
+
+/* On screens that are less than 1000px wide, place pacture at top and make the sidebar into a topbar */
+@media screen and (max-width: 1000px) {
+  .pic {
+    margin: auto;
+    height: auto;
+    position: relative;
+  }
+  .sidebar {
+    width: auto;
+    height: auto;
+    position: relative;
+  }
+  .sidebar a {float: left;}
+  div.content {
+    margin-left: 20px;
+    margin-right: 20px;
+    min-height: 0px;
+  }
+}
+
+/* On screens that are less than 767px, decrease title font size */
+@media screen and (max-width: 767px) {
+  .header {
+    font-size: 125%;
+  }
+  .footer-grid {
+    width: 300px;
+    margin: auto;
+  }
+}
+
+/* On screens that are less than 500px, display the bar vertically, instead of horizontally */
+@media screen and (max-width: 600px) {
+  .sidebar a {
+    text-align: center;
+    float: none;
+  }
+  .header {
+    padding: 5px;
+    font-size: 100%;
+  }
+  .header-left {
+    padding: 5px;
+    margin-left: 20px;
+    margin-right: 100px;
+  }
+  .header-right {
+    padding: 5px;
+    margin-right: 0;
+  }
+  div.content {
+    font-size: 75%;
+  }
+}
+
+/* On screens that are less than 350px, decrease title font size */
+@media screen and (max-width: 350px) {
+  .header {
+    font-size: 90%;
+  }
+}

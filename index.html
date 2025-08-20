@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Josh Inoue's Home Page</title>
+  <link href='https://fonts.googleapis.com/css?family=Armata' rel='stylesheet'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="shortcut icon" href="Icons/sqrt51-logo_0.png">
+  <style>
+    body {
+      background-image: url('background.png');
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+  </style>
+
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $('#blurb').load("blurb.html");
+    $('#home').click(function(){
+      $('#home').addClass("active");
+      $('#about').removeClass("active");
+      $('#publications').removeClass("active");
+      $('#tutoring').removeClass("active");
+      $('#blurb').load("blurb.html");
+      $('html,body').animate({ scrollTop: $("#blurb").offset().top -350}, 400);
+      return false;
+    });
+    $('#about').click(function(){
+      $('#home').removeClass("active");
+      $('#about').addClass("active");
+      $('#publications').removeClass("active");
+      $('#tutoring').removeClass("active");
+      $('#blurb').load("about.html");
+      $('html,body').animate({ scrollTop: $("#blurb").offset().top -350}, 400);
+      return false;
+    });
+    $('#publications').click(function(){
+      $('#home').removeClass("active");
+      $('#about').removeClass("active");
+      $('#publications').addClass("active");
+      $('#tutoring').removeClass("active");
+      $('#blurb').load("publications.html");
+      $('html,body').animate({ scrollTop: $("#blurb").offset().top -350}, 400);
+      return false;
+    });
+    $('#tutoring').click(function(){
+      $('#home').removeClass("active");
+      $('#about').removeClass("active");
+      $('#publications').removeClass("active");
+      $('#tutoring').addClass("active");
+      $('#blurb').load("tutoring.html");
+      $('html,body').animate({ scrollTop: $("#blurb").offset().top -350}, 400);
+      return false;
+    });
+  });
+  </script>
+
+</head>
+
+<body>
+
+<div class="allcontent">
+  <div class="container-fluid header">
+    <div class="row">
+      <div class="header-left">
+        <h1><a href="https://people.bath.ac.uk/jsi24"><b>Josh Inoue</b></a></h1>
+        <h4>Integrated PhD - Statistical Applied Mathematics</h4>
+      </div>
+      <div class="header-right">
+        <div class="logo">
+          <a href="https://github.com/sqrt51">
+            <img alt="sqrt51_logo" src="Icons/sqrt51-logo-transparent-white.png" height="90">
+            <img alt="sqrt51_logo" src="Icons/sqrt51-logo-transparent-gold.png" height="90" class="img-top">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page">
+
+    <!-- Profile Pic -->
+    <div class="pic">
+      <img src="Square.jpg" alt="profilePic" style="width:250px">
+    </div>
+
+    <!-- The sidebar -->
+    <div class="sidebar">
+      <a class="active" id="home">Home</a>
+      <a id="about">About</a>
+      <a id="publications">Publications</a>
+      <a id="tutoring">Tutoring</a>
+      <script type="text/javascript">
+        function eaddr() {
+          var dom='&#x62;&#x61;&#x74;&#x68;',
+          x40='&#x40;',
+          action='&#x6d;&#x61;&#x69;&#x6c;&#x74;&#x6f;&#x3a;',
+          user='&#x6a;&#x73;&#x69;&#x32;&#x34;',
+          extra='&#x2e;&#x61;&#x63;&#x2e;&#x75;&#x6b;',
+          display='&#x43;&#x6f;&#x6e;&#x74;&#x61;&#x63;&#x74;';
+          document.write('<a href="'+action+user+x40+dom+extra+'">'+display+'<\/a>');
+          }
+        eaddr()
+      </script>
+    </div>
+
+    <!-- Page content -->
+    <div class="content">
+      <div class="row">
+        <div class="col-xl-12 text-left pad" id="blurb">
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <br />
+
+  <div class="footer">
+    <div class="container-fluid footer-grid">
+      <div class="row">
+        <div class="col text-center">
+          <div class="p-2">
+            <div class="logo">
+              <a href="http://www.bath.ac.uk/">
+                <img alt="UoB_logo" src="Icons/uob-logo-white-transparent.png" height="60">
+                <img alt="UoB_logo" src="Icons/uob-logo-lightgrey-transparent.png" height="60" class="img-top">
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-12 order-lg-0 order-md-first order-xs-first text-center">
+          <div class="p-2">
+            <a href="https://www.bath.ac.uk/departments/department-of-mathematical-sciences/">Department of Mathematical Sciences</a><br>University of Bath<br>Bath BA2 7AY<br>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="p-2">
+            <div class="logo">
+             <a href="https://samba.ac.uk/">
+               <img alt="SAMBa" src="https://blogs.bath.ac.uk/samba/wp-content/uploads/sites/110/2018/03/SAMBa-White-Transparent.png" height="60">
+               <img alt="SAMBa" src="Icons/SAMBa-Grey-Transparent.png" height="60" class="img-top">
+             </a>
+           </div>
+         </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</body>
+
+</html>
